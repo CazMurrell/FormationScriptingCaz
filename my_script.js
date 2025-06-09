@@ -1,4 +1,4 @@
 function my_func() {
-    MessageBox.information("Baibai") }
+    MessageBox.information("Baibai y'all") }
 
 //je change dans toonboom
