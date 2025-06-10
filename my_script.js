@@ -39,5 +39,49 @@ function my_func() {
     var phrase = prenom + ( 3 + 4 ) // resultat "alex7"  < il y a une priorité entre les types de variables int ou string
 }
 
+function my_func2() {
+      //Les booleans
+    var my_var = true
+    mybool = false
 
+    var A = 10
+    var B = 30
+    var my_var = ( A > B ) //ça va afficher true ou false dans le message, les parenthèses ne sont pas nécessaires MAIS on les mets c'est mieux
+
+    MessageBox.information (my_var)
+}  
+function my_func2() {
+      //Les booleans
+
+    var A = true
+    var B = true
+    var C = true
+    var D = false
+    var my_var = ( A && B && C && D) //vérifie l'ensemble des propositions pour vérifier si tout est true, si un est false il affichera false. C'est comme un sanity check.
+
+    MessageBox.information (my_var)
+
+     var A = 100 == 100
+    var B = (5-9)== 100
+    var C = ( 5665-9 ) == 89950
+
+    var my_var = ( A || B || C || D) //si au moins une des propositions et true alors ça affiche true
+    
+    MessageBox.information (my_var)
+
+    /*
+    Les Booleans servent surtout en combinaison avec des opérateurs de type if
+    */
+
+    if my_var = true
+    MessageBox.information ("je suis exécuté")
+
+    // Les strings
+
+    var myvar = "ceci est un exemple de string"
+    // c'est une valeur à interpréter isolée par des guillemets
+    
+   MessageBox.information (my_var)
+
+}  
 //je change dans toonboom
