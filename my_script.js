@@ -130,21 +130,266 @@ function my_func2() {
     MessageBox.information(my_var) // affichera le contenu avec des virgules entre chaque élément de la liste
     
 }  
-*/
 
 function my_func2() {
-//exercice 
+    //exercice 
+    
+    var mots1 = "Camion"
+    var mots2 = "Olive"
+    var mots3 = "Original"
+    var mots4 = "Long"
+    
+    var mots_cache = mots1[0]+mots2[0]+mots3[0]+mots4[0]
+    MessageBox.information(mots_cache) // COOL
+    
+}
 
-  var mots1 = "Camion"
-  var mots2 = "Olive"
-  var mots3 = "Original"
-  var mots4 = "Long"
 
-  var mots_cache = mots1[0]+mots2[0]+mots3[0]+mots4[0]
-  MessageBox.information(mots_cache) // COOL
+function my_func2() {
+    //exercice 
+    
+    var my_array = ["jeanpierre",10,false] on peut mettre des string des int des bool
+    var my_array = [["jeanpierre","jeanmarc"],["lucie-Carole","Josianne-Marie"]] // on peut mettre des array dans des array
 
 }
 
+
+function my_func2() {
+    //exercice 
+    
+    var my_array = ["jeanpierre",10,false] on peut mettre des string des int des bool
+    var my_array = [["jeanpierre","jeanmarc"],["lucie-Carole","Josianne-Marie"]] // on peut mettre des array dans des array
+    
+    MessageLog.information(my_var)      
+}
+
+function my_func2() {
+    var my_string = "the quick brown fox jumps over the lazy dog" 
+    
+    MessageBox.information(my_string.length) // réponse : 43, le .length compte le nombre de caratère
+    
+    var words = my_string.split(" ") // retire l'espace
+    
+    MessageBox.information(words) // compte le nombre de mots qu'il y a dans la phrase
+    
+    var string_no_spaces = words.join("")
+    
+    MessageBox.information("String no spaces : "+string_no_spaces) // réponse : thequickbrownfoxjumpsoverthelazydog
+    MessageBox.information("String no spaces length : "+string_no_spaces.length)
+    
+    //on peut associer les étapes
+    
+    var string_no_spaces = words.split(" ").join("") //retire les espaces et colle les caractères ensemble
+    
+}
+
+function my_func2() {
+    //Les OBJECTS : exemple
+    
+    var character_data = {
+        "name":"Mario",
+        "HP":100 // exemple de couple clé/valeur
+        "stamina":52,
+        "weapon"{
+            "name":"axe"
+            "damage":30
+            "buff":{
+                "type":"ice_damage",
+                "damage":"+10"
+            }
+            "stuff":["hat", "..."]
+        },
+        
+        
+    }
+    
+    
+    MessageLog.information(character_data.weapon) // Le "." nous permet de nous promener dans l'arborescence
+    
+    character_data.weapon.buff.type = "fire_damage"
+    
+    MessageLog.information(character_data.weapon.buff.type) //réponse : fire damage
+    
+    // exemple :
+    
+    function my_func2() {
+        
+    var my_var = 10 // variable
+    
+    var marion_brain = {  //c'est marion_brain la variable
+    "current_brain_capicty":100, // la propriété de l'objet marion_brain (nomenclature)
+    "damage_per_new_information":10 // amage_per_new_information est une propriété de marion_brain
+}
+
+marion_brain.current_brain_capicty -= marion_brain.damage_per_new_information
+marion_brain.current_brain_capicty -= marion_brain.damage_per_new_information
+marion_brain.current_brain_capicty -= marion_brain.damage_per_new_information
+marion_brain.current_brain_capicty -= marion_brain.damage_per_new_information
+marion_brain.current_brain_capicty -= marion_brain.damage_per_new_information
+
+MessageBox.information(marion_brain.current_brain_capicty.)
+
+MessageBox.information(marion_brain["current_brain_capicty"]) //autre façon d'appeler la même chose
+}
+*/
+
+// autre exemple
+
+function my_func2() {
+    
+var arbre = {
+    "tronc":{   // on est pas obligés de mettre les guillemets mais c'est plus clair
+        "branche1":{
+          "branche2":{
+            "fruits":['pomme1','pomme2']
+          },
+          "branche3":{
+            "fruits":['pomme3','pomme4']
+          }
+        }
+      }
+    }
+
+
+  MessageBox.information(arbre.tronc.branche1.branche2.fruits[1]) //résultat pomme2
+
+// attention si on applique ensuite une opération sur une propriété du genre "tronc" = "pourri" alors on perd tout le reste de l'arborescence est remplacé et donc plus accessible
+}
+
+// Les Opérateurs
+
+function my_func2() {
+
+    var my_var = true
+
+    if(my_var){
+        MessageBox.information("my_var est true")
+    }else{
+        MessageBox.information("my_var est false")
+
+    }
+}
+
+function my_func2() {
+
+    var HP = 100
+
+    var fire_ball_damage = 35
+    var fire_bolt_damage = 115
+
+    var attaque = fire_bolt_damage
+
+
+    HP -= fire_ball_damage
+    
+    MessageBox.information("current health = "+HP)
+
+     if( HP > 0 ){
+
+        MessageBox.information("mon perso est vivant") 
+
+    }else{
+
+        MessageBox.information("mon perso est mort")
+  }
+
+
+}
+
+function my_func2() {
+
+    var HP = 100
+
+    var fire_ball_damage = 35
+    var fire_bolt_damage = 115
+
+    var attaque = fire_bolt_damage
+
+
+    HP -= fire_ball_damage
+    
+    MessageBox.information("current health = "+HP)
+
+     if( HP > 0 ){
+
+        MessageBox.information("mon perso est vivant") 
+
+    }else{
+
+        MessageBox.information("mon perso est mort")
+  }
+
+
+}
+
+
+function my_func2() {
+
+  var HP = 100
+
+  var fire_ball_damage = 35
+  var fire_bolt_damage = 115
+  var attaque = fire_bolt_damage
+  var nb_cat_life = 1
+
+  HP -= attaque
+  MessageBox.information("current health = "+HP)
+
+
+  if( HP <= 0 ){
+    MessageBox.information("le chat perd une vie")
+    nb_cat_life -=1
+  }
+
+  if( nb_cat_life == 0 ){
+    MessageBox.information("le chat est mort")
+  }
+
+}
+
+
+function my_func2() {
+
+  function addition(_A,_B){ // Alex met des underscore pour les distinguer d'une variable normale, mais c'est pas obligé > (_A,_B) c'est ça l'argument
+    var somme = _A + _B // déclarer la variation n'est pas nécessaire mais c'est plus lisible (on pourrait mettre direct return _A +_B)
+    return somme
+  }
+
+    MessageBox.information(10,10) //resultat : 20, les chiffres sont passés par la fonction addition
+  }
+
+  function my_func() {
+
+  var A = 30
+  var B = 30
+  var fruit = "pomme"
+
+
+
+  function manger(_aliment){
+    return "miam j'ai mangé "+_aliment  
+  }
+
+  function bonjour(_nom,_prenom){
+    return "bonjour je m'appelle "+_nom+" "+_prenom+" ! "
+  }
+
+
+  function insulte(){
+    return "wesh t'es pas sympa"
+  }  
+  
+  function affiche_a_et_b(_a,_b){
+    MessageBox.information(_a+" "+_b)
+  }
+
+  //MessageBox.information(somme)
+  MessageBox.information(manger(fruit))
+  MessageBox.information(bonjour(fruit,"Dappy"))
+  MessageBox.information(insulte())
+  affiche_a_et_b("toto","tutu")
+
+}
 
 
 
