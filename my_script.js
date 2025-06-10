@@ -38,6 +38,7 @@ function my_func() {
     var phrase = prenom + 3 // resultat "alex3"
     var phrase = prenom + ( 3 + 4 ) // resultat "alex7"  < il y a une priorité entre les types de variables int ou string
 }
+/*
 
 function my_func2() {
       //Les booleans
@@ -49,7 +50,7 @@ function my_func2() {
     var my_var = ( A > B ) //ça va afficher true ou false dans le message, les parenthèses ne sont pas nécessaires MAIS on les mets c'est mieux
 
     MessageBox.information (my_var)
-}  
+    }  
 function my_func2() {
       //Les booleans
 
@@ -69,19 +70,82 @@ function my_func2() {
     
     MessageBox.information (my_var)
 
-    /*
     Les Booleans servent surtout en combinaison avec des opérateurs de type if
-    */
-
+    
     if my_var = true
     MessageBox.information ("je suis exécuté")
+}
 
+function my_func2() {
     // Les strings
-
-    var myvar = "ceci est un exemple de string"
+    
+    var my_var = "ceci est un exemple de \"string\"🐸"
     // c'est une valeur à interpréter isolée par des guillemets
     
-   MessageBox.information (my_var)
-
+    // on peut associer des strings avec +
+    
+    var A = "cette formation"
+    var B = " très"
+    var C = " cool"
+    
+    var my_var = A + B + C
+    var my_var = my_var + B 
+    var my_var = my_var + B
+    var my_var = my_var + B // cette formation est très très très cool
+    
+    MessageBox.information (my_var)
+    
 }  
-//je change dans toonboom
+
+*/
+
+/* Les ARRAY
+function my_func2() {
+   
+    
+    // au lieu de 
+    
+    var my_var = A
+    var my_var = B
+    var my_var = C
+    
+    var my_var = ["A","B","C"]
+    
+    // si je ne veux afficher que A :
+    
+    MessageBox.information (my_var[0]) // l'ordre dans la liste de l'array attribue un chiffre, 0 c'est le premier de la liste, c'est la valeur de l'index
+    
+    var my_int = 2
+    var my_string = my_var[my_int] + my_var [2] + my_var [0] // ça fait CCA
+    
+    var my_var = [10,"B","C"] // on peut changer par des int ou mettre que des int
+    
+    var my_var = [] // montre que c'est une array
+    my_var.push("A") //ajoute "A" à cet array
+    
+    var my_var = []
+    my_var.push("A") // my_var[0] = A 
+    my_var.push("B")// my_var[1] = B 
+    my_var.push("C")// my_var[2] = C 
+    MessageBox.information(my_var) // affichera le contenu avec des virgules entre chaque élément de la liste
+    
+}  
+*/
+
+function my_func2() {
+//exercice 
+
+  var mots1 = "Camion"
+  var mots2 = "Olive"
+  var mots3 = "Original"
+  var mots4 = "Long"
+
+  var mots_cache = mots1[0]+mots2[0]+mots3[0]+mots4[0]
+  MessageBox.information(mots_cache) // COOL
+
+}
+
+
+
+
+
