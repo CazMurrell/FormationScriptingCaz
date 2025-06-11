@@ -5,8 +5,8 @@ function my_func(){
     var compiled_peg_list = list_of_peg_nodes.join("\n")
 
 
-    MessageBox.information(list_of_peg_nodes)
-    MessageBox.information("number of peg nodes : "+compiled_peg_list.length)
+    MessageBox.information(compiled_peg_list)
+    MessageBox.information("number of peg nodes : "+list_of_peg_nodes.length)
 
 }
 
