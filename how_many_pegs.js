@@ -45,7 +45,7 @@ function get_rotation(_peg){ //les fonctions sont même si elle sont notées apr
 
 //https://docs.toonboom.com/help/harmony-24/scripting/script/classnode.html ()
 
-function rotate_peg_90_degrees (_peg){
+function set_rotation (_peg){
 var selected_node = selection.selectedNode(0) //selection. c'est un outil TB pour indiquer quel node est sélectionné dans la nodeview on pourrait aussi mettre selectedNodes()[0] (ça choisit le premier dans un array de nodes selectionés)
     MessageBox.information(selected_node)
 
@@ -53,7 +53,7 @@ var selected_node = selection.selectedNode(0) //selection. c'est un outil TB pou
 }
 
 
-function set_rotation(_peg,_angle){
+function rotate_peg_90_degrees(_peg){
     node.setTextAttr(_peg,"ROTATION.ANGLEZ",frame.current(),"90")
 }
 
