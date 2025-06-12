@@ -54,7 +54,7 @@ var selected_node = selection.selectedNode(0) //selection. c'est un outil TB pou
 
 
 function set_rotation(_peg,_angle){
-    node.setTextAttr(_peg,"ROTATION.ANGLEZ",frame.current()= "90")
+    node.setTextAttr(_peg,"ROTATION.ANGLEZ",frame.current(),"90")
 }
 
 
