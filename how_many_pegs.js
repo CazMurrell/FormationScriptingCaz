@@ -46,7 +46,7 @@ function get_rotation(_peg){ //les fonctions sont même si elle sont notées apr
 */
 function get_rotation(_peg){ //les fonctions sont même si elle sont notées après l'endroit où elles sont appelées (ici par exemple elle est appelée au dessus)
 
-    var rotation_string = node.getTextAttr(_peg,frame.current(),"ROTATION.ANGLEZ") // attention ça donne la rotation mais en string, pas en int
+    var rotation_string = node.getTextAttr(_peg,frame.current(),"ROTATION.ANGLEZ") // attention ça donne la rotation mais en string, pas en int (c'est pour ça que c'est get "text" attr : c'est du string)
     var float_rotation = parseFloat(rotation_string) // parseFloat() change un chiffre en un entier
     return float_rotation
 }
@@ -62,7 +62,6 @@ function rotate_peg_90_degrees(){
     var selected_node = selection.selectedNode(0) //selection. c'est un outil TB pour indiquer quel node est sélectionné dans la nodeview on pourrait aussi mettre selectedNodes()[0] (ça choisit le premier dans un array de nodes selectionés)
     node.setTextAttr(_peg,"ROTATION.ANGLEZ",frame.current(),"90")
 }
-*/
 
 // ici une version plus intentionelle où on isole la valeur d'angle qu'on change
 function rotate_peg_90_degrees(){
@@ -71,14 +70,16 @@ function rotate_peg_90_degrees(){
     var angle = 90
     node.setTextAttr(selected_node,angle)
 }
+*/
 
 function rotate_peg_add_90_degrees(){
     var selected_peg = selection.selectedNode(0)
-    MessageBox.information(selected_node)
-    var old_angle = get_rotation(selected_node)
+    MessageBox.information(selected_peg)
+    var old_angle = get_rotation(selected_peg)
     MessageBox.information(old_angle)
-    var new_angle = old angle + 90
+    var new_angle = old_angle + 90
     set_rotation(selected_peg,new_angle)
+    MessageBox.information(new_angle)
 }
 
 

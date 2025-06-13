@@ -388,39 +388,39 @@ MessageBox.information(insulte())
 affiche_a_et_b("toto","tutu")
 
 }
-*/
 
 //EXERCICE créer des fonctions qui comptent le nombre de mots et le nombre de lettres
 
 function my_func2(){
+  
+//VARIABLES
+var my_phrase = "the quick brown fox jumps over the lazy dog"
 
- //VARIABLES
-  var my_phrase = "the quick brown fox jumps over the lazy dog"
 
-
-  //FONCTIONS
+//FONCTIONS
 function count_the_words(_argument){  // réexplication : une fonction n'est qu'un outil transformatif, on n'appelle pas une variable en particulier, on nomme un "argument"
-    var word_array = _argument.split(" ") //rappel mettre un coup de tab pour bien décaler la partie fonction (lisibilité)
-    var nb_words = word_array.length
-    return nb_words
+var word_array = _argument.split(" ") //rappel mettre un coup de tab pour bien décaler la partie fonction (lisibilité)
+var nb_words = word_array.length
+return nb_words
 }
 
 
 function count_the_letters(_argument){
-    var letters_array = _argument.split(" ").join("")
-    var nb_letters = letters_array.length
-    return nb_letters
+  var letters_array = _argument.split(" ").join("")
+  var nb_letters = letters_array.length
+  return nb_letters
 }
 
 function show_interesting_info_about(_phrase,_pretty_char){ //on peut faire une fonction pour les message box
-  MessageBox.information(_pretty_char+" nb words "+count_the_words(_phrase)) //c'est ici qu'on remplace l'argument par la variable voulue
-  MessageBox.information(_pretty_char+" "+count_the_letters(_phrase)) 
+MessageBox.information(_pretty_char+" nb words "+count_the_words(_phrase)) //c'est ici qu'on remplace l'argument par la variable voulue
+MessageBox.information(_pretty_char+" "+count_the_letters(_phrase)) 
 }
 
 show_interesting_info_about(my_phrase,"****")  
-  
+
 
 }
+*/
 
 //Travailler dans TB
 
@@ -428,17 +428,16 @@ show_interesting_info_about(my_phrase,"****")
 
 https://docs.toonboom.com/help/harmony-24/scripting/script/classnode.html
 
-*/
 
 function show_nb_of_pegs(){ // un script pour lister les nodes d'une scène
 
-  var list_de_type_de_nodes = ["PEG"]
-  var list_of_nodes = node.getNodes(list_de_type_de_nodes)
-  var compiled_peg_list = list_of_nodes.join("\n")
-  MessageBox.information("number of peg nodes : "+list_of_nodes.length)
+var list_de_type_de_nodes = ["PEG"]
+var list_of_nodes = node.getNodes(list_de_type_de_nodes)
+var compiled_peg_list = list_of_nodes.join("\n")
+MessageBox.information("number of peg nodes : "+list_of_nodes.length)
 
-  var first_peg = list_of_nodes[0]
-  MessageBox.information(first_peg)
+var first_peg = list_of_nodes[0]
+MessageBox.information(first_peg)
 }
 
 // LES FOR LOOPS
@@ -450,24 +449,26 @@ for (var 1 = 0 ; i<= 10 ; i++) // boucle qui compte jusqu'à 10
 // Exemple de "mot secret" une for loop qui compose au fur et à mesure un mot secret à
 
 function my_func(){
-
-  var list_of_words = ["Carotte","Olive","Orange","Lotus"]
-  var secret_word = ""
-
-  for(var i = 0 ; i < list_of_words.length ; i++){
-    var current_word = list_of_words[i]
-    MessageBox.information(current_word)
-    var first_letter = current_word[0]
-    secret_word += first_letter
-    MessageBox.information(secret_word)
-  }
-
   
-  MessageBox.information(secret_word)
+var list_of_words = ["Carotte","Olive","Orange","Lotus"]
+var secret_word = ""
 
+for(var i = 0 ; i < list_of_words.length ; i++){
+  var current_word = list_of_words[i]
+  MessageBox.information(current_word)
+  var first_letter = current_word[0]
+  secret_word += first_letter
+  MessageBox.information(secret_word)
 }
 
 
+MessageBox.information(secret_word)
+
+}
+
+*/
+
 function
 
-var list_of_pegs = ["PEG"]
+var list_of_nodes = ["PEG"]
+var
